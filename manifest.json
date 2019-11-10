@@ -1,0 +1,55 @@
+{
+    "manifest_version": 2,
+    "name": "النّاموسيه",
+    "description": "قيادة جووجل كروم بيد واحدة أو بدون! دعني شهرا واحدا ربّانا لحسابك وسوف أصل بك إلى شواطئ التشعّب وتغطية شبكتك الإجتماعية",
+    "version": "0.2",
+    "homepage_url": "https://github.com/hythamshiehab2/chrome_extension",
+    "browser_action": {
+        "default_icon": "icons/off.png",
+        "default_popup": "popup.html",
+        "default_title": "النّاموسيه"
+    },
+    "options_ui": {
+        "page": "popup.html",
+        /*Use Chrome stylesheet*/
+        "chrome_style": true
+    },
+    "icons": {
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+    "devtools_page": "devtools.html",
+    "background": {
+        "scripts": ["scripts/background.js", "scripts/surf.js", "scripts/starter.js", "scripts/footer.js"]
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "all_frames": true,
+        "js": ["scripts/jquery.min.js", "scripts/helpers.js", "scripts/bililiteRange.js", "scripts/jquery.sendkeys.js", "scripts/jquery.typetype.js", "scripts/jquery-ui.js", "scripts/content.js", "scripts/footer.js"],
+        "css": ["css/myactivetab.css", "css/jquery-ui.css"]
+  }],
+    "web_accessible_resources": [
+    "css/myactivetab.css", "footer.html"
+  ],
+    "permissions": [
+        "activeTab",
+ "alarms", 
+"notifications", 
+"tabs", 
+"http://*/*", 
+"https://*/*", 
+"<all_urls>", 
+"background", 
+"bookmarks", 
+"contentSettings",
+ "history",
+ "idle", 
+"management",
+ "notifications",
+ "pageCapture", 
+"topSites", 
+"storage", 
+"webNavigation",
+ "webRequestBlocking"
+  ]
+}
