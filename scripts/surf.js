@@ -30,15 +30,18 @@ function register() {
 
     if (typeof(Storage) !== "undefined") { 
         // Code for localStorage 
-        
-document.write("hhfdd");
+        rocknroll = localStorage.getItem('rocknroll');
+        //document.write(rocknroll);
+        if (typeof(rocknroll) !== "undefined") {
+         }
+      //document.write("hhfdd");
     } else { 
         // No web storage Support. 
     }
     console.log('document is loaded');
     console.log('surf:here');
     started = localStorage.getItem('started') || 'false';
-    rocknroll = localStorage.getItem('rocknroll') || 'false';
+    
     console.log('surf:started:' + started);
     if (started === 'true') {
         $('#toggleButton').bootstrapToggle('on');
