@@ -34,6 +34,7 @@ function register() {
       document.write(rocknroll);
       if (typeof(rocknroll) !== "undefined") {
       }
+      //555
       //document.write("hhfdd");
     } else {
       // No web storage Support.
